@@ -79,8 +79,9 @@ if __name__ == "__main__":
 
                 # Run inference on the preprocessed frame
                 results = hailo.run(frame)
-                print('results')
+                print('results===================================')
                 print(results)
+                print('results end===================================')
 
                 # Extract detections from the inference results
                 detections = extract_detections(results, video_w, video_h, class_names, args.score_thresh)
