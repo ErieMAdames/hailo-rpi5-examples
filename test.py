@@ -15,8 +15,8 @@ def extract_detections(hailo_output, w, h, class_names, threshold=0.5):
     results = []
     for class_id, detections in enumerate(hailo_output):
         for detection in detections:
+            print(len(detection), detection)
             if len(detection) >= 4:
-                print(detection)
                 continue
                 score = detection[4]
                 if score >= threshold:
