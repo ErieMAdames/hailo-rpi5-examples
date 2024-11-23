@@ -472,13 +472,13 @@ class GStreamerApp:
             identity_pad = identity.get_static_pad("src")
             identity_pad.add_probe(Gst.PadProbeType.BUFFER, self.app_callback, self.user_data)
 
-        hailo_display = self.pipeline.get_by_name("hailo_display")
-        if hailo_display is None:
-            print("Warning: hailo_display element not found, add <fpsdisplaysink name=hailo_display> to your pipeline to support fps display.")
-        else:
-            xvimagesink = hailo_display.get_by_name("xvimagesink0")
-            if xvimagesink is not None:
-                xvimagesink.set_property("qos", False)
+        # hailo_display = self.pipeline.get_by_name("hailo_display")
+        # if hailo_display is None:
+        #     print("Warning: hailo_display element not found, add <fpsdisplaysink name=hailo_display> to your pipeline to support fps display.")
+        # else:
+        #     xvimagesink = hailo_display.get_by_name("xvimagesink0")
+        #     if xvimagesink is not None:
+        #         xvimagesink.set_property("qos", False)
 
         # Disable QoS to prevent frame drops
         disable_qos(self.pipeline)
