@@ -99,7 +99,7 @@ class GStreamerDetectionApp(GStreamerApp):
             additional_params=self.thresholds_str)
         user_callback_pipeline = USER_CALLBACK_PIPELINE()
         display_pipeline = DISPLAY_PIPELINE(video_sink=self.video_sink, sync=self.sync, show_fps=self.show_fps)
-        tcp_pipeline = 'tcpclientsink name=hailo_display host=localhost port=8000  sync=false signal-fps-measurements=true'
+        tcp_pipeline = 'tcpclientsink name=hailo_display host=localhost port=8000'
         pipeline_string = (
             f'{source_pipeline} '
             f'{detection_pipeline} ! '
