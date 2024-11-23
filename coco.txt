@@ -50,7 +50,7 @@ sandwich
 orange
 broccoli
 carrot
-hot dog
+hot dogdeac
 pizza
 donut
 cake
