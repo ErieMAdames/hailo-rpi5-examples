@@ -66,7 +66,7 @@ if __name__ == "__main__":
             lores = {'size': (model_w, model_h), 'format': 'RGB888'}
             controls = {'FrameRate': 30}
             config = picam2.create_preview_configuration(main, lores=lores, controls=controls)
-            config["transform"] = libcamera.Transform(hflip=1)#, vflip=1)
+            config["transform"] = libcamera.Transform(hflip=1, vflip=1)
             picam2.configure(config)
 
             picam2.start_preview(Preview.QTGL, x=0, y=0, width=video_w, height=video_h)
