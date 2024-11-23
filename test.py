@@ -79,6 +79,7 @@ if __name__ == "__main__":
 
                 # Run inference on the preprocessed frame
                 results = hailo.run(frame)
+                print('results')
                 print(results)
 
                 # Extract detections from the inference results
