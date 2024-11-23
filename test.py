@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # Parse command-line arguments.
     parser = argparse.ArgumentParser(description="Detection Example")
     parser.add_argument("-m", "--model", help="Path for the HEF model.",
-                        default="/usr/share/hailo-models/yolov8s_h8l.hef")
+                        default="/usr/share/hailo-models/yolov6n.hef")
     parser.add_argument("-l", "--labels", default="coco.txt",
                         help="Path to a text file containing labels.")
     parser.add_argument("-s", "--score_thresh", type=float, default=0.5,
