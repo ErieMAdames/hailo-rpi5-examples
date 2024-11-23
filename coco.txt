@@ -1,7 +1,7 @@
-motorcycle
 person
 bicycle
 car
+motorcycle
 airplane
 bus
 train
@@ -50,7 +50,7 @@ sandwich
 orange
 broccoli
 carrot
-hot dogdeac
+hot dog
 pizza
 donut
 cake
