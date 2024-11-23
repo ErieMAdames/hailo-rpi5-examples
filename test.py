@@ -9,6 +9,8 @@ import cv2
 from picamera2 import MappedArray, Picamera2, Preview
 from picamera2.devices import Hailo
 
+from pprint import pprint
+
 
 def extract_detections(hailo_output, w, h, class_names, threshold=0.5):
     """Extract detections from the HailoRT-postprocess output."""
@@ -80,7 +82,7 @@ if __name__ == "__main__":
                 # Run inference on the preprocessed frame
                 results = hailo.run(frame)
                 print('results===================================')
-                print(results)
+                pprint(results)
                 print('results end===================================')
 
                 # Extract detections from the inference results
