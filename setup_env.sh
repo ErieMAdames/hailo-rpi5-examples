@@ -21,7 +21,7 @@ is_sourced() {
 }
 
 # Only proceed if the script is being sourced
-if is_sourced; then
+# if is_sourced; then
     echo "Setting up the environment..."
 
     # Check if we are working with hailo_tappas or hailo-tappas-core
@@ -119,6 +119,6 @@ if is_sourced; then
     export DEVICE_ARCHITECTURE="$device_arch"
     # Print the environment variable to verify
     echo "DEVICE_ARCHITECTURE is set to: $DEVICE_ARCHITECTURE"
-else
-    echo "This script needs to be sourced to correctly set up the environment. Please run '. $(basename "$0")' instead of executing it."
-fi
+# else
+#     echo "This script needs to be sourced to correctly set up the environment. Please run '. $(basename "$0")' instead of executing it."
+# fi
